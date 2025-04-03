@@ -10,6 +10,8 @@
     <style>
         html {
             scroll-behavior: smooth;
+            overflow-x: hidden;
+            background-color: rgb(41, 41, 41);
         }
         nav {
             background-color: rgb(47, 47, 47);
@@ -17,6 +19,10 @@
             left: 0;
             margin: 0;
             position: fixed;
+            width: 100vw;
+            display: inline-block;
+            border-bottom: 2mm ridge rgba(34, 150, 110, 0.6);
+            max-height: 2vh - 2mm;
         }
         .left {
             left: 0;
@@ -28,30 +34,55 @@
             font-family: "Gidole", sans-serif;
             color: white;
         }
-        a {
+        .link {
+        	font-size: x-small;
+       		top: 1.7vh;
             right: 0;
+			position: fixed;
             color: white;
             text-decoration: none;
             font-family: "Gidole", sans-serif;
+            padding-right: 20px;
+            color: blue;
+            transition: color 0.3s, transform 0.3s;
+        }
+        .link:hover {
+            color: grey;
+            transform: scale(1.2);
         }
         indent {
             padding-left: 20px;
             padding: 5px;
         }
+        body {
+        position: fixed;
+			top: 10vh;
+		}
+        .heading {
+        	font-size: 10px;
+        }	
+        p {
+         color: white;
+         font-family: arial;
+        }
     </style>
 </head>
+    <nav>
+        <h1 class="heading left padding">CloseRAM</h1>
+        <a href="#information" class="link padding"><h1>Information</h1></a>
+    </nav>
 <body>
+
     <nav>
         <h1 class="left padding">CloseRAM</h1>
-        <a href="#information" class="link padding">Information</a>
+        <a href="#information" class="link padding"><h1>Information</h1></a>
     </nav>
-    <div id="warning" class="warning">Some of this website's pages we advise you do not navigate to [SEE <a href="#whatisthis" >WARNING</a>]</div>
-    
 
-
-    <h1>What is a fork bomb?</h1>
+<block>
+    <h1 id="#whatisthis">What is a fork bomb?</h1>
     <indent>
-        <p>This website contains a simple fork bomb designed to use up the RAM on a computer</p>
+        <p>This website contains a simple fork bomb designed to use up the RAM on a computer, it is designed to open itself and constantly create tabs untill all the <b>RAM</b> is used up.</p>
+        <img width="50px" height="100px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Fork_bomb.svg/600px-Fork_bomb.svg.png"/>
     </indent>
 
 
